@@ -1,0 +1,151 @@
+// Global //
+$font-stack: Roboto, sans-serif;
+$primary-color: #3C464E;
+$secondary-color: #8B90A1;
+$white : #FFFFFF;
+$orange : #FD9714;
+$reddish : #F9423A;
+
+%bold-text {
+  	color: $primary-color;
+	font-weight: 600;
+}
+
+// style.css //
+body {
+  font: 100% $font-stack;
+  font-size: 1em;
+  color: $secondary-color;
+}
+
+section {
+	margin: 80px auto;
+}
+
+p {
+	line-height: 28px;
+}
+
+span {
+	line-height: 24px;
+}
+
+.navbar.fixed-top {
+  background-color: rgba(0,0,0,0);
+}
+
+.navbar.fixed-top.scrolled {
+  background-color: $orange !important;
+  transition: background-color 200ms linear;
+}
+
+.logo {
+	max-width: 120px;
+	padding: 10px;
+}
+
+.placeholder-bg {
+	background: url(../images/office.jpg);
+	background-size: auto 100%;
+	background-repeat:no-repeat;
+	background-position:center;
+	height: 680px;
+	text-align: center;
+}
+
+.motto {
+	vertical-align: middle;
+	line-height: 600px;
+	font-size: 3em;
+	color: $white;
+	display: block;
+	@extend %bold-text;
+}
+
+.scroll-down {
+	color: $white;
+	font-size: 3.2em;
+}
+
+.scroll-down:hover, .scroll-down:focus {
+	color: $orange;
+}
+
+.card {
+	margin: 15px 0;
+}
+
+.jumbo-text {
+	font-size: 1.6em;
+	@extend %bold-text;
+}
+
+.job-title {
+	display: block;
+	@extend %bold-text;
+}
+
+.btn {
+	padding: 6px 30px;
+	color: $white;
+	background : $orange;
+}
+
+.btn:hover, .btn:active, .btn:focus {
+	background : $reddish;
+}
+
+.divider {
+	max-width: 80%;
+}
+
+footer {
+	font-size: 0.8em;
+}
+
+hr {
+	display: none;
+}
+
+.fa-heart {
+	color: $reddish;
+}
+
+.socials > a {
+	font-size: 1.4em;
+	color: $secondary-color;
+}
+
+.socials > a:hover, .socials > a:active, .socials > a:focus {
+	color: $orange;
+}
+
+@media only screen and (max-width: 320px){
+	section {
+		margin: 20px auto;
+	}
+
+	.socials { display: none; }
+	
+	hr {
+		display: block;
+		padding: 0;
+		margin: 0;
+	}
+
+	.py-1, .pt-5 {
+		padding: 0 !important;
+	}
+
+	.float-right {
+		float: none !important;
+		margin-top: 10px;
+	}
+
+	footer .row {
+		text-align: center;
+	}
+}
+
+
+@import "../font-awesome-4.7.0/scss/font-awesome.scss";
